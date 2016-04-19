@@ -610,7 +610,7 @@ a {
   margin-right: 0;
 }
 #header .header-nav .social a.weibo {
-  background: url("/img/weibo.png") center no-repeat #aaf;
+  background: url("/img/weibo.png") center no-repeat #ec5037;
   border: 1px solid #aaf;
 }
 #header .header-nav .social a.weibo:hover {
@@ -624,8 +624,8 @@ a {
   border: 1px solid #cf5d0f;
 }
 #header .header-nav .social a.github {
-  background: url("/img/github.png") center no-repeat #afb6ca;
-  border: 1px solid #afb6ca;
+  background: url("/img/github.png") center no-repeat #fc041b;
+  border: 1px solid #fc041b;
 }
 #header .header-nav .social a.github:hover {
   border: 1px solid #fc041b;
