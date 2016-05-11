@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: Life | DataKnow</title>
+  <title>浅入SVM | DataKnow</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DataKnow">
-<meta property="og:url" content="http://yoursite.com/tags/Life/index.html">
+  <meta name="description" content="SVM：最好用的机器学习算法
+先说一下历史吧，1995年苏联统计学家、数学家计算机科学家佛拉基米尔·瓦普尼克（Vladimir N.Vapnik 2014年加入Facebook人工智能实验室）发表了最初的SVM文章，实际上他1963年就提出了支持向量的概念，当时以俄文发表，并没有人关注。直到东欧剧变、苏联解体导致苏联科学家移民潮来到美国，相关研究才引起重视！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅入SVM">
+<meta property="og:url" content="http://yoursite.com/2016/05/02/2016-05-02-SVM/index.html">
 <meta property="og:site_name" content="DataKnow">
-<meta property="og:description">
+<meta property="og:description" content="SVM：最好用的机器学习算法
+先说一下历史吧，1995年苏联统计学家、数学家计算机科学家佛拉基米尔·瓦普尼克（Vladimir N.Vapnik 2014年加入Facebook人工智能实验室）发表了最初的SVM文章，实际上他1963年就提出了支持向量的概念，当时以俄文发表，并没有人关注。直到东欧剧变、苏联解体导致苏联科学家移民潮来到美国，相关研究才引起重视！">
+<meta property="og:updated_time" content="2016-05-03T02:28:38.177Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DataKnow">
-<meta name="twitter:description">
+<meta name="twitter:title" content="浅入SVM">
+<meta name="twitter:description" content="SVM：最好用的机器学习算法
+先说一下历史吧，1995年苏联统计学家、数学家计算机科学家佛拉基米尔·瓦普尼克（Vladimir N.Vapnik 2014年加入Facebook人工智能实验室）发表了最初的SVM文章，实际上他1963年就提出了支持向量的概念，当时以俄文发表，并没有人关注。直到东欧剧变、苏联解体导致苏联科学家移民潮来到美国，相关研究才引起重视！">
   
     <link rel="alternative" href="/atom.xml" title="DataKnow" type="application/atom+xml">
   
@@ -194,57 +198,96 @@ var _hmt = _hmt || [];
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-2016-05-02-SVM" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/20/2016-04-20-SeeU/" class="archive-article-date">
-  	<time datetime="2016-04-20T13:44:36.000Z" itemprop="datePublished">Apr 20</time>
+    <div class="article-meta">
+      <a href="/2016/05/02/2016-05-02-SVM/" class="article-date">
+  	<time datetime="2016-05-02T13:39:59.000Z" itemprop="datePublished">2016-05-02</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/20/2016-04-20-SeeU/">我想要两颗西柚</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      浅入SVM
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Life/">Life</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SVM/">SVM</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/essay/">essay</a>
+	<a class="article-category-link" href="/categories/archives/">archives</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>SVM：最好用的机器学习算法</p>
+<p>先说一下历史吧，1995年苏联统计学家、数学家计算机科学家佛拉基米尔·瓦普尼克（Vladimir N.Vapnik 2014年加入Facebook人工智能实验室）发表了最初的SVM文章，实际上他1963年就提出了支持向量的概念，当时以俄文发表，并没有人关注。直到东欧剧变、苏联解体导致苏联科学家移民潮来到美国，相关研究才引起重视！<a id="more"></a></p>
+<p>引入一下《统计学习方法》的定义：支持向量机SVM是一种监督学习算法，也是一种二分类模型。它的基本模型是定义在特征空间上的间隔最大的线性分类器。通过核技巧的转换，使得支持向量机成为实质上的非线性分类器。支持向量机的学习策略就是学习间隔最大化，最终可形式化为一个求解凸二次规划问题。（如果将某个问题转换为凸优化问题，最后都可以迅速求解）</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/20/2016-04-20-Just-Begining/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Week Plan</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="2016-05-02-SVM" data-title="浅入SVM" data-url="http://yoursite.com/2016/05/02/2016-05-02-SVM/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"dataknow"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -267,9 +310,9 @@ var _hmt = _hmt || [];
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
